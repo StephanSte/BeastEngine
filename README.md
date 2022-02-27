@@ -1,2 +1,2 @@
 # BeastEngine
-jup der name ist so
+Engine Architecture and Design project
