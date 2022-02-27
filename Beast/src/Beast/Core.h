@@ -1,6 +1,6 @@
 #pragma once
 
-#ifdef HZ_PLATFORM_WINDOWS
+#ifdef BT_PLATFORM_WINDOWS
 	#ifdef BEAST_BUILD_DLL
 		#define BEAST_API __declspec(dllexport)
 	#else 
