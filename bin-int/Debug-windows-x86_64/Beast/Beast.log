@@ -1,6 +1,9 @@
-﻿  Log.cpp
+﻿  Application.cpp
+C:\Users\steph\source\repos\Beast\Beast\src\Beast\Application.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\steph\source\repos\Beast\Beast\src\Beast\Application.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\Users\steph\source\repos\Beast\Beast\src\Beast\Log.h(16,42): warning C4251: 'Beast::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Beast::Log'
 C:\Users\steph\source\repos\Beast\Beast\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
 C:\Users\steph\source\repos\Beast\Beast\src\Beast\Log.h(17,42): warning C4251: 'Beast::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Beast::Log'
 C:\Users\steph\source\repos\Beast\Beast\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+     Creating library ..\bin\Debug-windows-x86_64\Beast\Beast.lib and object ..\bin\Debug-windows-x86_64\Beast\Beast.exp
   Beast.vcxproj -> C:\Users\steph\source\repos\Beast\bin\Debug-windows-x86_64\Beast\Beast.dll
