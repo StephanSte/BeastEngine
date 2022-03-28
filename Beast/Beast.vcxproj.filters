@@ -4,6 +4,15 @@
     <Filter Include="Beast">
       <UniqueIdentifier>{945FE20C-0074-0ABE-C9F5-AD1D35C906EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Beast\Events">
+      <UniqueIdentifier>{F83C264A-E49F-B5EE-8D25-EEA479678171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Beast.h" />
@@ -16,9 +25,28 @@
     <ClInclude Include="src\Beast\EnteryPoint.h">
       <Filter>Beast</Filter>
     </ClInclude>
+    <ClInclude Include="src\Beast\Events\ApplicationEvent.h">
+      <Filter>Beast\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Beast\Events\Event.h">
+      <Filter>Beast\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Beast\Events\KeyEvent.h">
+      <Filter>Beast\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Beast\Events\MouseEvent.h">
+      <Filter>Beast\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Beast\Log.h">
       <Filter>Beast</Filter>
     </ClInclude>
+    <ClInclude Include="src\Beast\Window.h">
+      <Filter>Beast</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Beast\Application.cpp">
@@ -27,5 +55,9 @@
     <ClCompile Include="src\Beast\Log.cpp">
       <Filter>Beast</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bepch.cpp" />
   </ItemGroup>
 </Project>

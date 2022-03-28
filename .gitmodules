@@ -1,3 +1,6 @@
 [submodule "Beast/vendor/spdlog"]
 	path = Beast/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Beast/vendor/GLFW"]
+	path = Beast/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

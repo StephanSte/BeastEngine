@@ -5,6 +5,12 @@ workspace "Beast"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Beast/vendor/GLFW/include"
+
+include "Beast/vendor/GLFW"
+
 project "Beast"
     location "Beast"
     kind "SharedLib"
@@ -12,14 +18,27 @@ project "Beast"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "bepch.h"
+	pchsource "Beast/src/bepch.cpp"
+
+	staticruntime "off"
+	runtime "Release"
+	buildoptions {"/MD"}
+
     files { "%{prj.name}/src/**.h",
             "%{prj.name}/src/**.cpp",
     }
 
     includedirs {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
     }
+
+    links {
+		"GLFW",
+		"opengl32.lib"
+	}
 
     filter "system:windows"
         cppdialect "C++20"
@@ -55,6 +74,10 @@ project "Sandbox"
     language "C++"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    staticruntime "off"
+	runtime "Release"
+	buildoptions {"/MD"}
 
     files { "%{prj.name}/src/**.h",
             "%{prj.name}/src/**.cpp",
